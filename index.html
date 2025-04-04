@@ -1,39 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Temperature App</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-DQvkBjpPgn7RC31MCQoOeC9TI2kdqa4+BSgNMNj8v77fdC77Kj5zpWFTJaaAoMbC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-DQvkBjpPgn7RC31MCQoOeC9TI2kdqa4+BSgNMNj8v77fdC77Kj5zpWFTJaaAoMbC" crossorigin="anonymous">
 </head>
+
 <body>
     <style>
         body {
             text-align: center;
+            background-image: url(gradient.png);
+            background-size: cover;
+            margin: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
         }
     </style>
-    <nav class="navbar bg-body-tertiary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <img src="icons8-temperature-48.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-        Temperature App
-      </a>
-    </div>
-    </nav>
 
-    <div class="card">
+    <div class="card" style="height: 60vh;">
         <div class="card-body">
-            <h5 class="card-title">Temperature Converter</h5>
-            <p class="card-text">Enter the temperature in Celsius to convert it to Fahrenheit.</p>
+            <div class="container-fluid">
+                <img src="icons8-temperature-48.png" alt="Logo" width="60" height="56"
+                    class="d-inline-block align-text-top ">
+
+                <h1>Temperature Converter App</h1>
+
+
+            </div>
+            <p class="card-text py-3 fs-6">Enter the temperature in Fahrenheit to convert it to Celsius.</p>
 
             <form id="tempForm">
                 <div class="mb-3">
-                    <input type="number" class="form-control" id="celsius" placeholder="Enter temperature in Celsius" required>
+                    <input type="number" class="form-control" id="temp-fahrenheit"
+                        placeholder="Enter temperature in Fahrenheit" required>
                 </div>
                 <button type="submit" class="btn btn-primary">Convert</button>
+            </form>
+            <p class="my-3" id="result"></p>
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-YUe2LzesAfftltw+PEaao2tjU/QATaW/rOitAq67e0CT0Zi2VVRL0oC4+gAaeBKu" crossorigin="anonymous"></script>
+    <script>
+        document.getElementById('tempForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            convertFahrenheitToCelsius();
+        });
+
+        function convertFahrenheitToCelsius() {
+            const fahrenheit = document.getElementById("temp-fahrenheit").value;
+            const celsius = (fahrenheit - 32) * 5 / 9;
+            document.getElementById("result").innerText = `Temperature in Celsius: ${celsius.toFixed(2)} °C`;
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YUe2LzesAfftltw+PEaao2tjU/QATaW/rOitAq67e0CT0Zi2VVRL0oC4+gAaeBKu"
+        crossorigin="anonymous"></script>
+
 </body>
+
 </html>
