@@ -1,5 +1,5 @@
 Temperature Conversion App
 
-input -> temperature
+Convert temperature from Farenheit to Celcius
 
-Farenheit to Celcius
+live here -> https://jediaandoh.github.io/Temperature-app
