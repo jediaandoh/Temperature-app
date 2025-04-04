@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-DQvkBjpPgn7RC31MCQoOeC9TI2kdqa4+BSgNMNj8v77fdC77Kj5zpWFTJaaAoMbC" crossorigin="anonymous">
+</head>
+<body>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+    <nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="icons8-temperature-48.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+        Temperature App
+      </a>
+    </div>
+    </nav>
+
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Temperature Converter</h5>
+            <p class="card-text">Enter the temperature in Celsius to convert it to Fahrenheit.</p>
+
+            <form id="tempForm">
+                <div class="mb-3">
+                    <input type="number" class="form-control" id="celsius" placeholder="Enter temperature in Celsius" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Convert</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-YUe2LzesAfftltw+PEaao2tjU/QATaW/rOitAq67e0CT0Zi2VVRL0oC4+gAaeBKu" crossorigin="anonymous"></script>
+</body>
+</html>
